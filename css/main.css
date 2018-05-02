@@ -97,20 +97,70 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html {
+    font-family: 'Noto Sans', sans-serif;
+}
 
+.content {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
 
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
 
+.main-form {
+    margin: 2em;
+    border: 2px solid lightgrey;
+    border-radius: 1em;
+    padding: 2em;
+}
 
+.main-form.results {
+    display: none;
+}
 
+.main-form .input-group:not(:first-child) {
+    margin-top: 1.5em;
+}
 
+.main-form label {
+    display: block;
+    margin: 0.5em 0;
+    font-size: 1.3em;
+}
 
+.main-form .input-group:first-child label {
+    margin-top: 0;
+}
 
+.main-form input {
+    font-size: 2em;
+    width: 100%;
+    padding: 3px 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
 
+.disclaimer {
+    margin: 1em;
+    font-size: 0.85em;
+    color: grey;
+}
 
-
-
-
-
+.noscript-block {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 2em;
+    position: absolute;
+    top: 6em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 
 /* ==========================================================================
