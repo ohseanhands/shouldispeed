@@ -39,7 +39,15 @@
         var minutesSaved = minutesAtLimit - minutesAtDesired;
         var speedDifference = desired - limit;
 
-        if (speedDifference < 0) {
+        if (isNaN(minutesSaved)) {
+            minutesSaved = '0';
+            $resultsResponse.text('Huh...');
+            $resultsExplanation.text('it looks like what you\'ve entered doesn\'t work mathematically...');
+        } else if (!isFinite(minutesSaved)) {
+            minutesSaved = '0';
+            $resultsResponse.text('Huh...');
+            $resultsExplanation.text('it looks like what you\'ve entered doesn\'t work mathematically...');
+        } else if (speedDifference < 0) {
             $resultsResponse.text('Umm...');
             $resultsExplanation.text('driving significantly slower than the surrounding traffic is also dangerous. It is recommended to always follow the flow of traffic when possible. We do not condone unsafe or illegal driving.')
         } else if (speedDifference == 0) {
