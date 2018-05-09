@@ -64,5 +64,11 @@
         $resultsMinutesSaved.text(minutesSaved + ' minutes');
         $resultsDesiredSpeed.text(desired + ' mph');
         $resultsBox.show();
+
+        ga('send', 'event', {
+            'eventCategory': 'Form',
+            'eventAction': 'Submit',
+            'eventValue': Math.floor(speedDifference)
+        });
     });
  });
